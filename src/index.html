@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>Artem Rozko portfolio</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <script src="/js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+</head>
+<body>
+//= template/header.html
+<div class="row">
+    <div class="col-md-12">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/swiper/01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/swiper/02.jpg" alt=""></div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </div>
+</div>
+<p>wow3</p>
+//= template/footer.html
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: '.swiper-pagination',
+        speed: 1000,
+        autoplay: 3000,
+        autoHeight: false
+    })
+</script>
+</body>
+</html>

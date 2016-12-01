@@ -1,0 +1,16 @@
+body {
+  overflow-x: hidden; }
+
+.header {
+  height: 100px;
+  width: 100%;
+  background: transparent;
+  border-bottom: 1px #5A5D61 solid;
+  position: absolute;
+  z-index: 50; }
+  .header img {
+    margin-top: 40px; }
+
+.swiper-container {
+  width: 100%;
+  height: 650px; }

@@ -1,0 +1,21 @@
+{
+  "name": "application-name",
+  "description": "For my portfolio",
+  "main": "gulpfile.js",
+  "authors": [
+    "Artem Rozko"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "normalize-css": "^5.0.0"
+  }
+}
