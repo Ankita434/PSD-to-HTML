@@ -44,7 +44,7 @@ gulp.task('concatcss', function () {
         .pipe(gulp.dest('build/style'))
 });
 gulp.task('fonts', function () {
-    gulp.src('src/fonts/**/*.*')
+    gulp.src('src/fonts/**/*.ttf')
         .pipe(gulp.dest('build/fonts/'))
 });
 gulp.task('clean', function (cb) {
@@ -56,8 +56,10 @@ gulp.task('watch', function() {
     gulp.watch('src/sass/*.sass', ['sass']);
     gulp.watch('src/css/**/*.css', ['concatcss']);
     gulp.watch('src/img/**/*', ['img']);
+    gulp.watch('src/fonts/**/*.ttf', ['fonts']);
+
 
 });
 
 
-gulp.task('default', ['clean', 'html', 'sass', 'fonts', 'concatcss', 'concatjs', 'img' ]);
+gulp.task('default', ['clean', 'html', 'sass', 'fonts', 'concatcss', 'concatjs', 'img', 'fonts' ]);

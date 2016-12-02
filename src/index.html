@@ -6,39 +6,61 @@
     <link rel="stylesheet" href="/style/main.css">
     <script src="/js/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
 
 </head>
 <body>
-//= template/header.html
-<div class="row">
-    <div class="col-md-12">
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img src="img/swiper/01.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="img/swiper/02.jpg" alt=""></div>
-                ...
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+<div class="flex-container">
 
+
+    //= template/header.html
+    <div class="row">
+        <div class="col-md-12">
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="swiper-text">
+                            <h1>HI-TECH DESIGN</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                            <button class="swiper-button">
+                                <span>explore</span>
+                            </button>
+                        </div>
+                        <img src="img/swiper/01.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-text">
+                            <h2>HI-TECH DESIGN</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                            <button class="swiper-button">
+                                <span>explore</span>
+                            </button>
+                        </div>
+                        <img src="img/swiper/02.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </div>
+    <p>wow3</p>
+    //= template/footer.html
 </div>
-<p>wow3</p>
-//= template/footer.html
 <script>
-    var mySwiper = new Swiper ('.swiper-container', {
+    var mySwiper = new Swiper('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
 
         // If we need pagination
         pagination: '.swiper-pagination',
+        paginationHide: false,
         speed: 1000,
         autoplay: 3000,
-        autoHeight: false
+        autoHeight: false,
+        paginationClickable: true
     })
 </script>
 </body>
