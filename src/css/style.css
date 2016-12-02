@@ -102,3 +102,59 @@ body {
         color: white;
         text-transform: uppercase;
         font-family: 'Hind', sans-serif; }
+
+.definitions {
+  background-color: #FAFAFA;
+  padding: 85px 0; }
+  .definitions .def-wrap1, .definitions .def-wrap2, .definitions .def-wrap3, .definitions .def-wrap4, .definitions .def-wrap5, .definitions .def-wrap6 {
+    display: inline-block;
+    width: 33%;
+    margin-top: 3px;
+    padding-left: 45px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white; }
+    .definitions .def-wrap1 a, .definitions .def-wrap2 a, .definitions .def-wrap3 a, .definitions .def-wrap4 a, .definitions .def-wrap5 a, .definitions .def-wrap6 a {
+      text-decoration: none; }
+      .definitions .def-wrap1 a:hover, .definitions .def-wrap2 a:hover, .definitions .def-wrap3 a:hover, .definitions .def-wrap4 a:hover, .definitions .def-wrap5 a:hover, .definitions .def-wrap6 a:hover {
+        text-decoration: none; }
+      .definitions .def-wrap1 a .icon1, .definitions .def-wrap2 a .icon1, .definitions .def-wrap3 a .icon1, .definitions .def-wrap4 a .icon1, .definitions .def-wrap5 a .icon1, .definitions .def-wrap6 a .icon1 {
+        height: 50px;
+        opacity: 1;
+        width: 40px;
+        background-image: url(../img/sprite.png);
+        background-position: 0px 40px; }
+      .definitions .def-wrap1 a .icon2, .definitions .def-wrap2 a .icon2, .definitions .def-wrap3 a .icon2, .definitions .def-wrap4 a .icon2, .definitions .def-wrap5 a .icon2, .definitions .def-wrap6 a .icon2 {
+        height: 50px;
+        width: 40px;
+        background-image: url(../img/sprite.png);
+        background-position: -36px 49px; }
+      .definitions .def-wrap1 a .icon3, .definitions .def-wrap2 a .icon3, .definitions .def-wrap3 a .icon3, .definitions .def-wrap4 a .icon3, .definitions .def-wrap5 a .icon3, .definitions .def-wrap6 a .icon3 {
+        height: 50px;
+        width: 40px;
+        background-image: url(../img/sprite.png);
+        background-position: -72px 45px; }
+      .definitions .def-wrap1 a .icon4, .definitions .def-wrap2 a .icon4, .definitions .def-wrap3 a .icon4, .definitions .def-wrap4 a .icon4, .definitions .def-wrap5 a .icon4, .definitions .def-wrap6 a .icon4 {
+        height: 50px;
+        width: 40px;
+        background-image: url(../img/sprite.png);
+        background-position: -111px 44px; }
+      .definitions .def-wrap1 a .icon5, .definitions .def-wrap2 a .icon5, .definitions .def-wrap3 a .icon5, .definitions .def-wrap4 a .icon5, .definitions .def-wrap5 a .icon5, .definitions .def-wrap6 a .icon5 {
+        height: 50px;
+        width: 40px;
+        background-image: url(../img/sprite.png);
+        background-position: -161px 43px; }
+      .definitions .def-wrap1 a .icon6, .definitions .def-wrap2 a .icon6, .definitions .def-wrap3 a .icon6, .definitions .def-wrap4 a .icon6, .definitions .def-wrap5 a .icon6, .definitions .def-wrap6 a .icon6 {
+        height: 50px;
+        width: 40px;
+        background-image: url(../img/sprite.png);
+        background-position: -206px 43px; }
+      .definitions .def-wrap1 a p, .definitions .def-wrap2 a p, .definitions .def-wrap3 a p, .definitions .def-wrap4 a p, .definitions .def-wrap5 a p, .definitions .def-wrap6 a p {
+        color: #A8A9AC;
+        font-weight: 400;
+        font-size: 15px; }
+      .definitions .def-wrap1 a h3, .definitions .def-wrap2 a h3, .definitions .def-wrap3 a h3, .definitions .def-wrap4 a h3, .definitions .def-wrap5 a h3, .definitions .def-wrap6 a h3 {
+        color: #515769;
+        font-size: 22px;
+        font-family: 'Hind', sans-serif;
+        font-weight: 700; }
