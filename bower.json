@@ -18,6 +18,9 @@
     "animate.css": "^3.5.2",
     "normalize-css": "^5.0.0",
     "bootstrap": "^3.3.7",
-    "wow": "wowjs#^1.1.2"
+    "wow": "wowjs#^1.1.2",
+    "swiper": "^3.4.0",
+    "masonry": "^4.1.1",
+    "components-font-awesome": "^4.7.0"
   }
 }

@@ -1,5 +1,17 @@
+@font-face
+  font-family: Hind
+  src: url(../fonts/Hind/Hind-R.ttf)
+
 body
   overflow-x: hidden
+
+.page-on-scroll
+  background-color: white !important
+  transition: 0.5s
+  a
+    color: black !important
+
+
 
 .header
   height: 100px
@@ -7,8 +19,13 @@ body
   background: transparent
   border-bottom: 1px #5A5D61 solid
   position: fixed
+  transition: 0.5s
   top: 0
-  z-index: 50
+  z-index: 500
+  .fa-bars
+    font-size: 30px
+    width: 30px
+    height: 30px
   img
     float: left
   .header_wrapper
@@ -16,6 +33,7 @@ body
     height: 100px
     display: flex
     align-items: center
+
     ul
       width: 100%
       height: 100%
@@ -24,14 +42,24 @@ body
       justify-content: flex-end
       margin: 0
       padding: 0
+      i
+        @media screen and (min-width: 767px)
+          display: none
+      @media screen and (max-width: 767px)
+        display: flex
+        align-items: center
       .li_wrapper
         display: flex
         align-items: stretch
+        @media screen and (max-width: 767px)
+          display: none
       li
         align-items: center
         display: flex
         list-style-type: none
         a
+          font-weight: 600
+          font-family: 'Hind', sans-serif
           position: relative
           text-decoration: none
           text-transform: uppercase
@@ -59,9 +87,15 @@ body
             background: #17bed2
             content: " "
             transition: .5s
+
 .swiper-container
   width: 100%
   height: 650px
+  img
+    display: block
+    width: 100vw
+    height: 100vh
+    object-fit: cover
   .swiper-text
     position: absolute
     margin-top: 20%
@@ -101,17 +135,52 @@ body
         color: white
         text-transform: uppercase
         font-family: 'Hind', sans-serif
+
 .definitions
   background-color: #FAFAFA
-  padding: 85px 0
+  padding: 100px 0
+
   .def-wrap1, .def-wrap2, .def-wrap3, .def-wrap4, .def-wrap5, .def-wrap6
     display: inline-block
-    width: 33%
+    margin-bottom: 30px
+    width: 100%
     margin-top: 3px
+    height: 213px
+    vertical-align: top
     padding-left: 45px
     padding-top: 40px
     padding-bottom: 40px
     background-color: white
+
+    &:hover
+      h3
+        margin-top: -40px
+        transition: 0.5s
+      .icon1
+        opacity: 0
+        transition: 0.5s
+        visibility: hidden
+      .icon2
+        opacity: 0
+        transition: 0.5s
+        visibility: hidden
+      .icon3
+        opacity: 0
+        transition: 0.5s
+        visibility: hidden
+      .icon4
+        opacity: 0
+        transition: 0.5s
+        visibility: hidden
+      .icon5
+        opacity: 0
+        transition: 0.5s
+        visibility: hidden
+      .icon6
+        opacity: 0
+        transition: 0.5s
+        visibility: hidden
+
 
     a
       text-decoration: none
@@ -119,10 +188,12 @@ body
         text-decoration: none
       .icon1
         height: 50px
+        transition: 0.5s
         opacity: 1
         width: 40px
         background-image: url(../img/sprite.png)
         background-position: 0px 40px
+
       .icon2
         height: 50px
         width: 40px
@@ -152,13 +223,349 @@ body
         color: #A8A9AC
         font-weight: 400
         font-size: 15px
+        font-family: 'Hind', sans-serif
+
       h3
         color: #515769
         font-size: 22px
         font-family: 'Hind', sans-serif
         font-weight: 700
+        transition: 0.5s
+
+.products
+  padding: 100px 0
+  h3
+    font-weight: 700
+    font-size: 30px
+    color: #515769
+    font-family: 'Hind', sans-serif
+  p
+    font-family: 'Hind', sans-serif
+    font-weight: 400
+    font-size: 15px
+    color: #A6A7AA
+
+  .item-wrap
+    img
+      margin-top: 50px
+      margin-bottom: 25px
+      width: 100%
+    a
+      color: #515769
+      font-weight: 700
+      margin-right: 15px
+      margin-bottom: 15px
+      font-family: 'Hind', sans-serif
+      font-size: 22px
+      &:hover
+        color: #999caa
+        text-decoration: none
+    span
+      font-size: 14px
+      font-weight: 400
+      color: #bfc1c7
+    p
+      margin-top: 15px
+      a
+        color: #999caa
+        text-transform: uppercase
+        font-size: 13px
+        font-weight: 600
+        &:hover
+          color: #d6d8de
+
+.company-logo
+  height: 200px
+  display: flex
+  align-items: center
+  background-color: #FAFAFA
+  .swiper-slide
+    @media screen and (max-width: 767px)
+      width: 7% !important
+  a
+    filter: grayscale(100%)
+    &:hover
+      filter: grayscale(0%)
+
+.lo
+  overflow-x: hidden
+
+.rewievs
+  color: white
+  padding: 100px 0
+
+  h2
+    color: #515769
+    font-weight: 700
+    font-size: 30px
+    font-family: 'Hind', sans-serif
+
+  p
+    font-size: 17px
+    font-weight: 400
+    color: #a6a7aa
+    font-family: 'Hind', sans-serif
+    span
+      color: #81848f
+      font-size: 14px
+      font-weight: 700
+
+.kit
+  padding: 100px 0
+  background-color: #FAFAFA
+  display: flex
+  align-items: center
+  .hight
+    height: 550px !important
+    @media screen and (max-width: 768px)
+      height: auto!important
+  .flexer
+    display: flex
+    align-items: center
+    @media screen and (max-width: 768px)
+      display: block
+  .item-wrap
+
+    padding: 60px 45px
+    background-color: white
+    @media screen and (max-width: 768px)
+      width: 80%
+      margin: 5% 10%
+      height: auto
+    p
+      font-family: 'Hind', sans-serif
+      font-size: 15px
+      font-weight: 400
+      margin-bottom: 15px
+    h3
+      font-size: 22px
+      font-weight: 700
+      color: #515769
+      font-family: 'Hind', sans-serif
+      span
+        font-size: 14px
+        font-weight: 400
+        color: #bfc1c7
+        font-family: 'Hind', sans-serif
+    ul
+      margin: 0
+      padding-left: 0
+      li
+        font-size: 13px
+        color: #81848f
+        margin-bottom: 10px
+        font-family: 'Hind', sans-serif
+        font-weight: 600
+        list-style-type: none
+        .chert
+          display: inline-block
+          margin-right: 15px
+          margin-bottom: 5px
+          width: 9px
+          height: 2px
+          background: #17bed2
+          content: " "
+    .icon1
+      height: 50px
+      width: 40px
+      background-image: url(../img/sprite.png)
+      background-position: 0px 45px
+    .icon2
+      height: 50px
+      width: 40px
+      background-image: url(../img/sprite.png)
+      background-position: -76px 45px
+    .icon3
+      height: 50px
+      width: 40px
+      background-image: url(../img/sprite.png)
+      background-position: -161px 45px
+    button
+      margin-top: 20px
+      background-color: #F3F4F5
+      border: none
+      transition: .5s
+      padding: 15px 30px
+      &:hover
+        transition: .5s
+        background-color: #17BED2
+        a
+          color: white
+      a
+        font-weight: 600
+        color: #515771
+        font-family: 'Hind', sans-serif
+
+        text-transform: uppercase
+        &:hover
+
+          text-decoration: none
+
+.clients
+  background-color: white
+  padding: 80px 0
+
+  .inner
+    @media screen and (max-width: 768px)
+      margin-bottom: 40px
+  h3
+    font-family: 'Hind', sans-serif
+    font-weight: 700
+    font-size: 30px
+    color: #515769
+  p
+    font-family: 'Hind', sans-serif
+    font-size: 15px
+    font-weight: 400
+    color: #a6a7aa
+  img
+    width: 100%
 
 
 
+.show-case
+  background-color: #FAFAFA
+  padding: 105px 0
+  .text
+    margin-bottom: 60px
+    @media screen and (max-width: 768px)
+      width: 80%
+  .list
+    img
+      width: 100%
+    a
+      padding: 0 30px
+      width: 100%
+      height: 100%
+      position: absolute
+      z-index: 50
+      top: 0
+      transition: 0.5s
+      color: white
+      &:hover
+        background-color: rgba(0, 0, 0, 0.64)
+        text-decoration: none
+        padding: 20px 30px
+        transition: 0.5s
+        h3
+          opacity: 1
+        p
+          opacity: 1
+      p
+        color: white
+        opacity: 0
+        font-family: 'Hind', sans-serif
+
+      h3
+        color: white
+        opacity: 0
+        font-family: 'Hind', sans-serif
 
 
+  .col-md-8, .col-md-4
+    margin: 0
+    padding: 0
+  h3
+    font-family: 'Hind', sans-serif
+    font-weight: 700
+    font-size: 30px
+    color: #515769
+  p
+    font-family: 'Hind', sans-serif
+    font-size: 15px
+    font-weight: 400
+    color: #a6a7aa
+
+
+footer
+  position: relative
+  background-image: url(../img/send-form-bg.jpg)
+  width: 100%
+  background-size: cover
+  .links-form
+    padding: 100px 0
+    margin-bottom: 100px
+    h3
+      margin: 0
+      color: white
+      font-size: 30px
+      font-weight: 700
+    ul
+      margin: 0
+      padding: 0
+      li
+        margin: 0
+        padding: 0
+        list-style-type: none
+        margin-bottom: 30px
+        a
+          color: #cbd3e1
+          font-size: 16px
+          font-weight: 500
+          &:hover
+            color: white
+            font-family: 'Hind', sans-serif
+            text-decoration: none
+    .form-wrapper
+      margin-left: 200px
+      @media screen and (max-width: 768px)
+        margin-left: 0
+      h3
+        margin-bottom: 30px
+      input
+        background-color: rgba(0, 0, 0, 0.27)
+        width: 460px
+        border: none
+        height: 50px
+        padding: 20px
+        margin-bottom: 20px
+        outline: none
+        @media screen and (max-width: 768px)
+          width: 80%
+      textarea
+        background-color: rgba(0, 0, 0, 0.27)
+        width: 460px
+        border: none
+        height: 130px
+        padding: 20px
+        margin-bottom: 20px
+        outline: none
+        @media screen and (max-width: 768px)
+          width: 80%
+      button
+        width: 110px
+        height: 50px
+        text-transform: uppercase
+        background-color: #17BED2
+        font-family: 'Hind', sans-serif
+        font-weight: 500
+        color: white
+        font-size: 14px
+        padding: 20px 10px
+        border: none
+
+  .footer
+    border-top: 1px #5A5D61 solid
+    width: 100%
+    align-items: center
+    display: flex
+    height: 100px
+    .flex
+      width: 100%
+      justify-content: space-between
+      display: flex
+      align-items: center
+      p
+        font-weight: 700
+        font-size: 17px
+        margin: 0
+        color: white
+        display: inline-block
+        float: right
+        @media screen and (max-width: 768px)
+          font-size: 5px
+        span
+          font-family: 'Hind', sans-serif
+          color: #17BED2
+        @media screen and (max-width: 768px)
+          font-size: 5px

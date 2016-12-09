@@ -1,9 +1,9 @@
 /**
  * Created by Artemka on 27.11.2016.
  */
-'use strict';
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     rimraf = require('rimraf'),
     watch = require('gulp-watch'),
     imagemin = require('gulp-imagemin');
-
+    require('events').EventEmitter.prototype._maxListeners = 100;
 
 gulp.task('html', function () {
     gulp.src('src/**/*.html')
@@ -25,9 +25,25 @@ gulp.task('img', function () {
         .pipe(gulp.dest('build/img/'));
 });
 
-gulp.task('concatjs', function () {
-    gulp.src('src/js/**/*.js')
+gulp.task('js-sources', function () {
+    gulp.src([
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/jquery-ui/jquery-ui.js',
+            'bower_components/wow/dist/wow.js',
+            'bower_components/swiper/dist/js/swiper.js',
+            'bower_components/masonry/dist/masonry.pkgd.js'
+        ])
+        .pipe(concat('main-sources.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('build/js'))
+});
+gulp.task('concat-js',['js-sources'], function () {
+    gulp.src([
+            'src/js/main.js'
+        ])
+        .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('build/js'))
 });
 gulp.task('sass', function () {
@@ -36,7 +52,14 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('src/css/'))
 });
 gulp.task('concatcss', function () {
-    gulp.src('src/css/**/*.css')
+    gulp.src([
+            'bower_components/animate.css/animate.css',
+            'bower_components/bootstrap/dist/css/bootstrap.css',
+            'bower_components/normalize-css/normalize.css',
+            'bower_components/swiper/dist/css/swiper.css',
+            'bower_components/components-font-awesome/css/font-awesome.css',
+            'src/css/style.css'
+        ])
         .pipe(sourcemaps.init())
         .pipe(autoprefixer())
         .pipe(concat('main.css'))
@@ -52,7 +75,7 @@ gulp.task('clean', function (cb) {
 });
 gulp.task('watch', function() {
     gulp.watch('src/**/*.html', ['html']);
-    gulp.watch('src/js/**/*.js', ['concatjs']);
+    gulp.watch('src/js/**/*.js', ['concat-js']);
     gulp.watch('src/sass/*.sass', ['sass']);
     gulp.watch('src/css/**/*.css', ['concatcss']);
     gulp.watch('src/img/**/*', ['img']);
@@ -62,4 +85,4 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('default', ['clean', 'html', 'sass', 'fonts', 'concatcss', 'concatjs', 'img', 'fonts' ]);
+gulp.task('default', [ 'html', 'sass', 'fonts', 'concatcss', 'concat-js', 'img', 'fonts' ]);
