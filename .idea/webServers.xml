@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="afdddc11-beb6-4894-9365-2aa86b8ebbaf" name="foolishhare.96.It" url="http://31.170.165.151">
+        <fileTransfer host="31.170.165.151" port="21" rootFolder="/public_html" password="dfcbdfd8dfdedfcfdfc7df9ddf9ddf9fdf99df98df9f" username="u245154670">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

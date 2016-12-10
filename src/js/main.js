@@ -3,32 +3,35 @@ var Layout = function () {
 
     // handle on page scroll
     var handleHeaderOnScroll = function () {
-        if ($(window).scrollTop() > 360) {
+        if ($(window).scrollTop() > 60) {
             document.getElementById("imageid").src = "/img/logo-dark.png";
             $('#icon_wrapper').addClass('icon_wrapper');
             $('header').addClass('page-on-scroll');
-            $('i').style.color = 'white';
+            $('i').removeClass('white');
 
         } else {
             $('#icon_wrapper').removeClass('icon_wrapper');
             $('header').removeClass('page-on-scroll');
             document.getElementById("imageid").src = "/img/logo.png";
+            $('i').addClass('white');
+
         }
     }
-
-
     return {
         init: function () {
-            handleHeaderOnScroll(); // initial setup for fixed header
-
-            // handle minimized header on page scroll
-            $(window).scroll(function () {
+            handleHeaderOnScroll();
+            $(window).scroll(function() {
                 handleHeaderOnScroll();
             });
         }
     };
 }();
 
-$(document).ready(function () {
+$(document).ready(function() {
     Layout.init();
+    $('.parallax-window').parallax({imageSrc: '../img/swiper/01.jpg'});
+    $("#i-button" ).click(function() {
+        $(".li_wrapper").toggle();
+
+    });
 });

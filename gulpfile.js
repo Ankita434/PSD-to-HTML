@@ -31,15 +31,17 @@ gulp.task('js-sources', function () {
             'bower_components/jquery-ui/jquery-ui.js',
             'bower_components/wow/dist/wow.js',
             'bower_components/swiper/dist/js/swiper.js',
-            'bower_components/masonry/dist/masonry.pkgd.js'
+            'bower_components/masonry/dist/masonry.pkgd.js',
+            'bower_components/parallax.js/parallax.js'
         ])
         .pipe(concat('main-sources.js'))
         .pipe(uglify())
         .pipe(gulp.dest('build/js'))
 });
-gulp.task('concat-js',['js-sources'], function () {
+gulp.task('concat-js', function () {
     gulp.src([
-            'src/js/main.js'
+            'src/js/main.js',
+            'src/js/gmap.js'
         ])
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
@@ -85,4 +87,4 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('default', [ 'html', 'sass', 'fonts', 'concatcss', 'concat-js', 'img', 'fonts' ]);
+gulp.task('default', [ 'html', 'sass', 'fonts', 'concatcss', 'concat-js', 'img', 'fonts', 'js-sources' ]);

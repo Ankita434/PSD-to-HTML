@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>Artem Rozko portfolio</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <script src="/js/main-sources.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+</head>
+<body>
+<script>
+    new WOW().init();
+</script>
+//= template/header.html
+<!--========== PARALLAX START ==========-->
+<div class="parallax-window">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>CONTACT</h2>
+                <p>Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua <br>
+                    enim minim estudiat veniam siad venumus dolore</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--========== PARALLAX END ==========-->
+<!--========== CONTACT START ==========-->
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 wow fadeInLeft" data-wow-delay=".2s">
+                <h4>New York </h4>
+                <span>HEAD OFFICE</span>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
+
+                <p><i class="fa fa-phone" aria-hidden="true"></i> 1 012 3456 7890</p>
+
+                <p><i class="fa fa-envelope-o" aria-hidden="true"></i>hq@acidus.com</p>
+            </div>
+            <div class="col-md-4 wow fadeInLeft" data-wow-delay=".4s">
+                <h4>London</h4>
+                <span>OPERATION</span>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
+
+                <p><i class="fa fa-phone" aria-hidden="true"></i> 1 012 3456 7890</p>
+
+                <p><i class="fa fa-envelope-o" aria-hidden="true"></i>hq@acidus.com</p>
+            </div>
+            <div class="col-md-4 wow fadeInLeft" data-wow-delay=".6s">
+                <h4>Singapore</h4>
+                <span>FINANCE</span>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor</p>
+
+                <p><i class="fa fa-phone" aria-hidden="true"></i> 1 012 3456 7890</p>
+
+                <p><i class="fa fa-envelope-o" aria-hidden="true"></i>hq@acidus.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--========== CONTACT END ==========-->
+<div id="map">
+
+</div>
+<!--========== CLIENTS START==========-->
+<div class="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 client-text">
+                <div class="inner">
+                    <h3>Our Clients</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret
+                        dolore magna aliqua enim minim veniam exercitation ipsum dolor sit amet consectetur
+                        adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam
+                        exercitation</p>
+                    <p>Ipsum dolor sit amet consectetur adipiscing elit sed tempor incididut ut sead laboret dolore
+                        magna aliqua enim minim veniam exercitation ipsum dolor sit amet consectetur adipiscing</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <img src="img/red_roof_build.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--========== CLIENTS END==========-->
+//= template/footer.html
+<script>
+    var map = new GMaps({
+        el: '#map',
+        lat: 50.4488137,
+        lng: 30.5244353,
+    });
+    map.addMarker({
+        lat: 50.4488137,
+        lng: 30.5244353,
+        title: 'Our office',
+        infoWindow: {
+            content: '<h3>We a here</h3>'
+        }
+
+    });
+</script>
+</body>
+</html>

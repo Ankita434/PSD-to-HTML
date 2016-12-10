@@ -1,18 +1,39 @@
 @font-face
   font-family: Hind
   src: url(../fonts/Hind/Hind-R.ttf)
-
+@font-face
+  font-family: Hind-B
+  src: url(../fonts/Hind/Hind-B.ttf)
 body
   overflow-x: hidden
+$light-blue: #17bed2
+$white: #fff
+$spesial-gray: #FAFAFA
+$p-gray: #a6a7aa
+$darck-gray: #81848f
+$super-dark: #515769
+.parallax-window
+  min-height: 500px
+  background: transparent
+  display: flex
+  align-items: center
+  h2
+    font-size: 80px
+    font-weight: 700
+    color: $white
+    font-family: 'Hind-B', sans-serif
+  p
+    color: $p-gray
+    font-size: 15px
+    font-weight: 400
 
 .page-on-scroll
-  background-color: white !important
+  background-color: $white !important
   transition: 0.5s
   a
     color: black !important
-
-
-
+.white
+  color: $white
 .header
   height: 100px
   width: 100%
@@ -33,7 +54,6 @@ body
     height: 100px
     display: flex
     align-items: center
-
     ul
       width: 100%
       height: 100%
@@ -53,6 +73,19 @@ body
         align-items: stretch
         @media screen and (max-width: 767px)
           display: none
+          position: absolute
+          top:  100px
+          right: 0
+          width: 50%
+          background-color: $white
+          li
+            padding: 25px
+            a
+              color: black !important
+              padding: 5px 0
+              line-height: 5px
+              &:after
+                display: none !important
       li
         align-items: center
         display: flex
@@ -63,7 +96,7 @@ body
           position: relative
           text-decoration: none
           text-transform: uppercase
-          color: white
+          color: $white
           padding: 20px
           font-size: 13px
           line-height: 60px
@@ -74,7 +107,7 @@ body
             opacity: 1
             width: 9px
             height: 2px
-            background: #17bed2
+            background: $light-blue
             content: " "
             transition: .5s
           &:after
@@ -84,7 +117,7 @@ body
             opacity: 0
             width: 9px
             height: 2px
-            background: #17bed2
+            background: $light-blue
             content: " "
             transition: .5s
 
@@ -93,51 +126,43 @@ body
   height: 650px
   img
     display: block
-    width: 100vw
-    height: 100vh
-    object-fit: cover
   .swiper-text
     position: absolute
     margin-top: 20%
     margin-left: 5%
-    h1
-      color: white
-      font-size: 4em
-      text-transform: uppercase
-      font-family: 'Hind', sans-serif
-      font-weight: 700
     h2
-      color: white
-      font-size: 4em
+      color: $white
+      font-size: 6em
       text-transform: uppercase
-      font-family: 'Hind', sans-serif
+      font-family: 'Hind-B', sans-serif
       font-weight: 700
     p
-      font-size: 2em
+      font-size: 15px
       font-family: 'Hind', sans-serif
-      color: gray
+      color: $darck-gray
+      margin-bottom: 45px
     .swiper-button
       cursor: pointer
       padding: 15px 25px
       background-color: transparent
-      border: 1px gray solid
+      border: 1px $darck-gray solid
       &:hover
-        background-color: white
+        background-color: $white
         transition: .5s
         span
-          color: gray
+          color: $darck-gray
           font-weight: 600
           transition: .5s
           font-family: 'Hind', sans-serif
       span
         font-size: 13px
         font-weight: 600
-        color: white
+        color: $white
         text-transform: uppercase
         font-family: 'Hind', sans-serif
 
 .definitions
-  background-color: #FAFAFA
+  background-color: $spesial-gray
   padding: 100px 0
 
   .def-wrap1, .def-wrap2, .def-wrap3, .def-wrap4, .def-wrap5, .def-wrap6
@@ -150,7 +175,7 @@ body
     padding-left: 45px
     padding-top: 40px
     padding-bottom: 40px
-    background-color: white
+    background-color: $white
 
     &:hover
       h3
@@ -226,7 +251,7 @@ body
         font-family: 'Hind', sans-serif
 
       h3
-        color: #515769
+        color: $super-dark
         font-size: 22px
         font-family: 'Hind', sans-serif
         font-weight: 700
@@ -237,13 +262,13 @@ body
   h3
     font-weight: 700
     font-size: 30px
-    color: #515769
+    color: $super-dark
     font-family: 'Hind', sans-serif
   p
     font-family: 'Hind', sans-serif
     font-weight: 400
     font-size: 15px
-    color: #A6A7AA
+    color: $p-gray
 
   .item-wrap
     img
@@ -251,7 +276,7 @@ body
       margin-bottom: 25px
       width: 100%
     a
-      color: #515769
+      color: $super-dark
       font-weight: 700
       margin-right: 15px
       margin-bottom: 15px
@@ -278,7 +303,7 @@ body
   height: 200px
   display: flex
   align-items: center
-  background-color: #FAFAFA
+  background-color: $spesial-gray
   .swiper-slide
     @media screen and (max-width: 767px)
       width: 7% !important
@@ -291,28 +316,31 @@ body
   overflow-x: hidden
 
 .rewievs
-  color: white
+  color: $white
   padding: 100px 0
 
   h2
-    color: #515769
+    color: $super-dark
     font-weight: 700
     font-size: 30px
-    font-family: 'Hind', sans-serif
+    font-family: 'Hind-B', sans-serif
 
   p
     font-size: 17px
     font-weight: 400
-    color: #a6a7aa
+    color: $p-gray
     font-family: 'Hind', sans-serif
+    &:last-child
+      margin-top: 20px
     span
-      color: #81848f
+      color: $darck-gray
       font-size: 14px
       font-weight: 700
+      font-family: 'Hind-B', sans-serif
 
 .kit
   padding: 100px 0
-  background-color: #FAFAFA
+  background-color: $spesial-gray
   display: flex
   align-items: center
   .hight
@@ -327,7 +355,7 @@ body
   .item-wrap
 
     padding: 60px 45px
-    background-color: white
+    background-color: $white
     @media screen and (max-width: 768px)
       width: 80%
       margin: 5% 10%
@@ -340,7 +368,7 @@ body
     h3
       font-size: 22px
       font-weight: 700
-      color: #515769
+      color: $super-dark
       font-family: 'Hind', sans-serif
       span
         font-size: 14px
@@ -352,7 +380,7 @@ body
       padding-left: 0
       li
         font-size: 13px
-        color: #81848f
+        color: $darck-gray
         margin-bottom: 10px
         font-family: 'Hind', sans-serif
         font-weight: 600
@@ -363,7 +391,7 @@ body
           margin-bottom: 5px
           width: 9px
           height: 2px
-          background: #17bed2
+          background: $light-blue
           content: " "
     .icon1
       height: 50px
@@ -388,12 +416,12 @@ body
       padding: 15px 30px
       &:hover
         transition: .5s
-        background-color: #17BED2
+        background-color: $light-blue
         a
-          color: white
+          color: $white
       a
         font-weight: 600
-        color: #515771
+        color: $super-dark
         font-family: 'Hind', sans-serif
 
         text-transform: uppercase
@@ -402,7 +430,7 @@ body
           text-decoration: none
 
 .clients
-  background-color: white
+  background-color: $white
   padding: 80px 0
 
   .inner
@@ -412,19 +440,19 @@ body
     font-family: 'Hind', sans-serif
     font-weight: 700
     font-size: 30px
-    color: #515769
+    color: $super-dark
   p
     font-family: 'Hind', sans-serif
     font-size: 15px
     font-weight: 400
-    color: #a6a7aa
+    color: $p-gray
   img
     width: 100%
 
 
 
 .show-case
-  background-color: #FAFAFA
+  background-color: $spesial-gray
   padding: 105px 0
   .text
     margin-bottom: 60px
@@ -441,7 +469,7 @@ body
       z-index: 50
       top: 0
       transition: 0.5s
-      color: white
+      color: $white
       &:hover
         background-color: rgba(0, 0, 0, 0.64)
         text-decoration: none
@@ -452,12 +480,12 @@ body
         p
           opacity: 1
       p
-        color: white
+        color: $white
         opacity: 0
         font-family: 'Hind', sans-serif
 
       h3
-        color: white
+        color: $white
         opacity: 0
         font-family: 'Hind', sans-serif
 
@@ -469,12 +497,12 @@ body
     font-family: 'Hind', sans-serif
     font-weight: 700
     font-size: 30px
-    color: #515769
+    color: $super-dark
   p
     font-family: 'Hind', sans-serif
     font-size: 15px
     font-weight: 400
-    color: #a6a7aa
+    color: $p-gray
 
 
 footer
@@ -487,7 +515,7 @@ footer
     margin-bottom: 100px
     h3
       margin: 0
-      color: white
+      color: $white
       font-size: 30px
       font-weight: 700
     ul
@@ -503,7 +531,7 @@ footer
           font-size: 16px
           font-weight: 500
           &:hover
-            color: white
+            color: $white
             font-family: 'Hind', sans-serif
             text-decoration: none
     .form-wrapper
@@ -536,10 +564,10 @@ footer
         width: 110px
         height: 50px
         text-transform: uppercase
-        background-color: #17BED2
+        background-color: $light-blue
         font-family: 'Hind', sans-serif
         font-weight: 500
-        color: white
+        color: $white
         font-size: 14px
         padding: 20px 10px
         border: none
@@ -559,13 +587,139 @@ footer
         font-weight: 700
         font-size: 17px
         margin: 0
-        color: white
+        color: $white
         display: inline-block
         float: right
         @media screen and (max-width: 768px)
           font-size: 5px
         span
           font-family: 'Hind', sans-serif
-          color: #17BED2
+          color: $light-blue
         @media screen and (max-width: 768px)
           font-size: 5px
+.about-advantages
+  padding: 100px 0
+  h3
+    color: $super-dark
+    font-size: 22px
+    font-weight: 700
+    font-family: 'Hind-B', sans-serif
+  p
+    font-family: 'Hind', sans-serif
+    font-weight: 400
+    font-size: 15px
+    color: $p-gray
+  a
+    font-size: 13px
+    font-family: 'Hind-B', sans-serif
+    color: $p-gray
+    text-transform: uppercase
+    &:after
+      position: absolute
+      left: 92px
+      bottom: 10px
+      opacity: 1
+      width: 9px
+      height: 2px
+      background: $light-blue
+      content: " "
+      transition: .5s
+    &:hover
+      text-decoration: none
+      color: #bcbcbc
+.meet-team
+  background-color: $spesial-gray
+  padding: 100px 0
+  h2
+    color: $super-dark
+    font-size: 30px
+    font-weight: 700
+    font-family: 'Hind-B', sans-serif
+  p
+    font-size: 15px
+    font-weight: 400
+    color: $p-gray
+    &:first-child
+      margin-bottom: 60px
+  img
+    width: 100%
+  h4
+    font-size: 22px
+    display: inline-block
+    font-family: 'Hind-B', sans-serif
+    color: $super-dark
+    &:hover
+      text-decoration: none
+  span
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: 400
+    color: #bfc1c7
+    margin-left: 15px
+  a
+    font-size: 13px
+    font-family: 'Hind-B', sans-serif
+    color: $p-gray
+    text-transform: uppercase
+    &:after
+      position: absolute
+      left: 92px
+      bottom: 10px
+      opacity: 1
+      width: 9px
+      height: 2px
+      background: $light-blue
+      content: " "
+      transition: .5s
+    &:hover
+      text-decoration: none
+      color: #bcbcbc
+.faq-definitions
+  background-color: $spesial-gray
+  padding: 100px 0
+  .col-md-6
+    padding: 0 1px
+  .def-wrap
+    background-color: $white
+    padding: 60px 50px
+    margin-top: 2px
+    a
+      &:hover
+        text-decoration: none
+    p
+      color: #A8A9AC
+      font-weight: 600
+      font-size: 15px
+      font-family: 'Hind', sans-serif
+  
+    h3
+      color: $super-dark
+      font-size: 22px
+      font-family: 'Hind-B', sans-serif
+      font-weight: 700
+.contact
+  padding: 100px 0
+  p
+    color: #A8A9AC
+    font-size: 15px
+    font-family: 'Hind', sans-serif
+    &:nth-last-child(2)
+      color: $darck-gray
+    &:last-child
+      color: $darck-gray
+    i
+      color: $light-blue
+      margin-right: 10px
+  span
+    font-size: 14px
+    color: #bfc1c7
+  h4
+    margin-right: 20px
+    font-size: 22px
+    display: inline-block
+    font-family: 'Hind-B', sans-serif
+    color: $super-dark
+#map
+  width: 100%
+  height: 400px
+

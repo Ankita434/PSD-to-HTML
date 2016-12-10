@@ -15,136 +15,25 @@
     new WOW().init();
 </script>
 //= template/header.html
-<!--========== SWIPER START ==========-->
-<div class="row">
-    <div class="col-md-12">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="swiper-text">
-                        <h1>PRODUCT PRICING</h1>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        <button class="swiper-button">
-                            <span>explore</span>
-                        </button>
-                    </div>
-                    <img src="img/swiper/01.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <div class="swiper-text">
-                        <h2>HI-TECH DESIGN</h2>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                        <button class="swiper-button">
-                            <span>explore</span>
-                        </button>
-                    </div>
-                    <img src="img/swiper/02.jpg" alt="">
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
-</div>
-<!--========== SWIPER END ==========-->
-<!--========== KIT START==========-->
-<div class="kit">
+<!--========== PARALLAX START ==========-->
+<div class="parallax-window">
     <div class="container">
         <div class="row">
-            <div class="flexer">
-                <div class="item-wrap wow fadeInLeft col-xs-12 col-sm-12 col-md-4 " data-wow-delay=".3s">
-                    <div class="flexer">
-                        <div class="inner">
-                            <div class="icon1"></div>
-                            <h3>Starter Kit <span>- $</span> 49</h3>
-
-                            <p>Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-
-                            <ul class="features">
-                                <li>
-                                    <div class="chert"></div>
-                                    Basic Features
-                                </li>
-                                <li>
-                                    <div class="chert"></div>
-                                    Up to 5 products
-                                </li>
-                                <li>
-                                    <div class="chert"></div>
-                                    50 Users Panels
-                                </li>
-                            </ul>
-                            <button><a href="">choose</a></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="item-wrap hight wow fadeIn col-xs-12 col-sm-12 col-md-4" data-wow-delay=".3s">
-                    <div class="flexer">
-                        <div class="inner">
-                            <div class="icon2"></div>
-                            <h3>Professional <span>- $</span> 149</h3>
-
-                            <p>Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-
-                            <ul class="features">
-                                <li>
-                                    <div class="chert"></div>
-                                    Basic Features
-                                </li>
-                                <li>
-                                    <div class="chert"></div>
-                                    Up to 5 products
-                                </li>
-                                <li>
-                                    <div class="chert"></div>
-                                    50 Users Panels
-                                </li>
-                            </ul>
-                            <button><a href="">choose</a></button>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="item-wrap wow fadeInRight col-xs-12 col-sm-12 col-md-4" data-wow-delay=".3s">
-                    <div class="flexer">
-                        <div class="inner">
-                            <div class="icon3"></div>
-                            <h3>Advanced <span>- $</span> 249</h3>
-
-                            <p>Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
-
-                            <ul class="features">
-                                <li>
-                                    <div class="chert"></div>
-                                    Basic Features
-                                </li>
-                                <li>
-                                    <div class="chert"></div>
-                                    Up to 5 products
-                                </li>
-                                <li>
-                                    <div class="chert"></div>
-                                    50 Users Panels
-                                </li>
-                            </ul>
-                            <button><a href="">choose</a></button>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-12">
+                <h2>PRODUCT PRICING</h2>
+                <p>Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua <br>
+                    enim minim estudiat veniam siad venumus dolore</p>
             </div>
         </div>
     </div>
 </div>
-<!--========== KIT END==========-->
+<!--========== PARALLAX END ==========-->
 <!--========== REVIEWS START ==========-->
 <div class="rewievs">
     <div class="container">
         <div class="row">
             <div class="col-md-12 ">
                 <h2>Customer Reviews</h2>
-
                 <div class="swiper-container3 lo">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -152,12 +41,10 @@
                                 Ducimus et fuga
                                 <br>impedit in possimus quam vel. Accusantium alias amet blanditiis commodi dolores
                                 dolorum eveniet expedita explicabo fuga harum, hic</p>
-
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis quaerat quis?
                                 Ducimus et fuga impedit in possimus quam<br> vel. Accusantium alias amet blanditiis
                                 commodi dolores dolorum eveniet expedita explicabo fuga harum, hic, illo impedit minima?
                             </p>
-
                             <p><span>John Miles, </span>Metronic customer</p>
                         </div>
                         <div class="swiper-slide">
@@ -197,6 +84,7 @@
     var mySwiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
         loop: true,
+        parallax: true,
         pagination: '.swiper-pagination',
         paginationHide: false,
         speed: 1000,
@@ -204,7 +92,6 @@
         autoHeight: false,
         paginationClickable: true
     });
-
 </script>
 <script>
     var mySwiper2 = new Swiper('.swiper-container2', {
